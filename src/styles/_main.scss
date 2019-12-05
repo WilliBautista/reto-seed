@@ -265,6 +265,11 @@ header {
           padding: 15px;
           color: $veryDarkBlue;
           border-bottom: 1px solid $grayaLight;
+
+          span {
+            line-height: 25;
+            word-break: break-all;
+          }
         }
 
         .final-link {
