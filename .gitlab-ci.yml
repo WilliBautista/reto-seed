@@ -1,12 +1,13 @@
-image: node:10.17.0
 image: ruby:2.3
+
+before_script:
+  - bundle install --path vendor
 
 pages:
   script:
-  - bundle install
   - bundle exec jekyll build -d dist
   artifacts:
     paths:
-    - public
+    - dist
   only:
   - master
