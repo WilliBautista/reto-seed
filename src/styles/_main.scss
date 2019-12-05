@@ -388,6 +388,11 @@ header {
             right: 25px;
           };
 
+          img {
+            left: 10%;
+            transform: none;
+          }
+
           p {
             text-align: left;
             font-size: szrem(16);
