@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const postcssPresetEnv = require('postcss-preset-env');
 
 const basePath = __dirname;
-const distPath = 'dist';
+const distPath = 'docs';
 
 const pathResolve = (pathComplete) => path.resolve(basePath, pathComplete);
 
