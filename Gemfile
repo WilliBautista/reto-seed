@@ -1,4 +1,4 @@
 source "https://rubygems.org"
 
-gem 'colorator', '1.0.0'
+gem 'colorator', '0.1'
 gem 'jekyll', '3.1.2'
