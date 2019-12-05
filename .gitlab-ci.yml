@@ -3,7 +3,6 @@ image: ruby:2.3
 
 pages:
   script:
-  - jekyll --version
   - bundle install
   - bundle exec jekyll build -d dist
   artifacts:
