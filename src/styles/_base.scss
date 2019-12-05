@@ -1,0 +1,58 @@
+// Global styles
+html,
+body {
+  height: 100%;
+
+  &,
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+body {
+  @include font;
+  line-height: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: $grayishViolet;
+  transition: all $transition ease;
+}
+
+p {
+  @include text(center);
+  line-height: szrem(30);
+}
+
+h1 {
+  @include font(szrem(50), $fbold, $veryDarkBlue);
+  line-height: szrem(50);
+}
+
+h2 {
+  @include font(szrem(30), $fbold, $veryDarkBlue);
+  line-height: szrem(30);
+}
+
+h3 {
+  @include font(szrem(25), $fbold, $veryDarkBlue);
+  line-height: szrem(25);
+}
+
+h4 {
+  @include font(szrem(18), $fbold, $veryDarkBlue);
+  line-height: szrem(18);
+}

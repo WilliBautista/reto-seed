@@ -1,0 +1,60 @@
+// Layout
+.wrapper-contain {
+  max-width: $mxwDesktop;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+// Buttons
+.btn {
+  @include font(szrem(20), $fbold, white);
+  appearance: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  transition: all $transition ease;
+  cursor: pointer;
+
+  // Version cyan
+  &--cyan {
+    background: $cyan;
+    border: 1px solid $cyan;
+  }
+
+  // Center button
+  &--center {
+    display: block;
+    margin: 10px auto;
+  }
+
+  // Type block
+  &--block {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  // small version
+  &--small {
+    font-size: szrem(16);
+    padding: 5px 20px;
+  }
+
+  &:hover {
+    background: lighten($cyan, 20);
+    border-color: lighten($cyan, 20);
+  }
+}
+// Inputs
+input {
+  @include font(szrem(16, 16));
+  @include size(100%);
+  color: $darkViolet;
+  appearance: none;
+  padding: 15px 10px;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+
+  &:focus {
+    border: inset 2px solid $darkViolet;
+  }
+}

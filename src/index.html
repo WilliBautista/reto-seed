@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <section class="header-wrapper wrapper-contain">
+        <div class="top-logo">
+          <img src="./assets/images/svg/logo.svg" alt="Shortly">
+        </div>
+        <nav class="main-menu" id="main-menu" role="navigation">
+          <ul class="main-menu-list main-menu-list--navigation">
+            <li class="main-menu-list__item"><a href="#">Features</a></li>
+            <li class="main-menu-list__item"><a href="#">Pricing</a></li>
+            <li class="main-menu-list__item"><a href="#">Resources</a></li>
+          </ul>
+          <ul class="main-menu-list main-menu-list--user">
+            <li class="main-menu-list__item"><a href="#">Login</a></li>
+            <li class="main-menu-list__item"><a class="btn btn--cyan" href="#">Sign Up</a></li>
+          </ul>
+        </nav>
+        <div class="main-menu-hamburguer" id="main-menu-hamburguer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </section>
+    </header>
+    <main class="main">
+      <section class="landing-content">
+        <article class="wrapper-contain">
+          <img src="./assets/images/svg/illustration-working.svg" alt="Illustration">
+          <div class="landing">
+            <h1 class="landing-title">More than just shorter links</h1>
+            <p class="landing-desc">Build your brand’s recognition and get detailed insights on how your links are performing.</p>
+            <button type="button" class="btn btn--cyan btn--center" id="get-started-header">Get Started</button>
+          </div>
+        </article>
+      </section>
+      <section class="main-content">
+        <article class="shorten-link wrapper-contain">
+          <form class="shorten-form" id="shorten-form" autocomplete="off">
+            <div class="shorten-form-group">
+              <input type="text" class="shorten-form__input" id="shorten-form__input" placeholder="Shorten a link here..." pattern="^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$">
+              <span>Please add a link...</span>
+            </div>
+            <input type="submit" class="btn btn--cyan btn--block" id="shorten-form__submit" value="Shorten It!">
+          </form>
+          <ul class="shorten-list" id="shorten-list"></ul>
+        </article>
+        <article class="advanced wrapper-contain">
+          <div class="advanced__header">
+            <h2 class="title title--black">Advanced Statistics</h2>
+            <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+          </div>
+          <div class="advanced__services">
+            <div class="service">
+              <img src="./assets/images/svg/icon-brand-recognition.svg" alt="Brand Recognition">
+              <h3>Brand Recognition</h3>
+              <p>Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.</p>
+            </div>
+            <div class="service">
+              <img src="./assets/images/svg/icon-detailed-records.svg" alt="Detailed Records">
+              <h3>Detailed Records</h3>
+              <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+            </div>
+            <div class="service">
+              <img src="./assets/images/svg/icon-fully-customizable.svg" alt="Fully Customizable">
+              <h3>Fully Customizable</h3>
+              <p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="footer-container">
+        <article class="footer-first wrapper-contain">
+          <h2 class="title title--white">Boost your links today</h2>
+          <button type="button" class="btn btn--cyan" id="get-started-footer">Get Started</button>
+        </article>
+        <article class="footer-second wrapper-contain">
+          <div class="footer-second__logo">
+            <img src="./assets/images/svg/logo-white.svg" alt="Shortly">
+          </div>
+          <div class="footer-second__links">
+            <ul class="links-footer">
+              <li class="links-footer__item">
+                <h4>Features</h4>
+              </li>
+              <li class="links-footer__item"><a href="#">Link Shortening</a></li>
+              <li class="links-footer__item"><a href="#">Branded Links</a></li>
+              <li class="links-footer__item"><a href="#">Analytics</a></li>
+            </ul>
+            <ul class="links-footer">
+              <li class="links-footer__item">
+                <h4>Resources</h4>
+              </li>
+              <li class="links-footer__item"><a href="#">Blog</a></li>
+              <li class="links-footer__item"><a href="#">Developers</a></li>
+              <li class="links-footer__item"><a href="#">Support</a></li>
+            </ul>
+            <ul class="links-footer">
+              <li class="links-footer__item">
+                <h4>Company</h4>
+              </li>
+              <li class="links-footer__item"><a href="#">About</a></li>
+              <li class="links-footer__item"><a href="#">Out Team</a></li>
+              <li class="links-footer__item"><a href="#">Careers</a></li>
+              <li class="links-footer__item"><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-second__social-networks">
+            <ul class="social-networks">
+              <li class="social-networks__facebook"><a href="#"></a></li>
+              <li class="social-networks__twitter"><a href="#"></a></li>
+              <li class="social-networks__pinterest"><a href="#"></a></li>
+              <li class="social-networks__instagram"><a href="#"></a></li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </footer>
+  </body>
+</html>

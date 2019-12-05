@@ -1,0 +1,46 @@
+// Mixins
+  // Font
+@mixin font($size: var(--fsize), $family: $fmedium, $color: $grayishViolet) {
+  font: {
+    size: $size;
+    family: $family;
+  }
+  color: $color;
+}
+  // Text
+@mixin text($align: left, $decoration: none) {
+  text: {
+    align: $align;
+    decoration: $decoration;
+  }
+}
+  // Container size
+@mixin size($width: auto, $height: auto) {
+  width: $width;
+  height: $height;
+}
+  // Container equal size
+@mixin esize($size) {
+  @include size($size, $size);
+}
+
+// Function
+/// Replace `$search` with `$replace` in `$string`
+/// @author Hugo Giraudel
+/// @param {String} $string - Initial string
+/// @param {String} $search - Substring to replace
+/// @param {String} $replace ('') - New value
+/// @return {String} - Updated string
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1)+$replace+str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+  // calc pixels to rem}
+@function szrem($size_px, $base: 18) {
+  @return ($size_px / $base)+rem;
+}
