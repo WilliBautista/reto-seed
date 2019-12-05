@@ -4,8 +4,8 @@ const itemLink = (originalUrl, shortenUrl) => `
       <span>${originalUrl}</span>
     </div>
     <div class="final-link">
-      <span>https://rel.ink/${shortenUrl}</span>
-      <button type="button" class="btn btn--cyan btn--small btn--block btn-copy-link">Copy</button>
+      <span>${shortenUrl}</span>
+      <button type="button" class="btn btn--cyan btn--small btn--block btn-copy-link" data-clipboard-text="${shortenUrl}">Copy</button>
     </div>
   </li>
 `;

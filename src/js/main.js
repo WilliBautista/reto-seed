@@ -5,7 +5,7 @@ import './imports/styles';
 // Modules
 import stickyHeader from './modules/sticky-header';
 import burguerMenu from './modules/burguer-menu';
-import shortenLink from './modules/shortenLink';
+import shortenLink from './modules/shorten-link';
 
 // Menu sticky
 window.onscroll = () => stickyHeader();
