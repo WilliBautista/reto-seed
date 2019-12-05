@@ -5,6 +5,7 @@ before_script:
 
 pages:
   script:
+  - bundle exec
   - gem install jekyll --no-document
   - jekyll new testreto
   - cd testreto
