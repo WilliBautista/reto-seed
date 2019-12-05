@@ -6,6 +6,7 @@ import './imports/styles';
 import stickyHeader from './modules/sticky-header';
 import burguerMenu from './modules/burguer-menu';
 import shortenLink from './modules/shorten-link';
+import getStarted from './modules/get-started';
 
 // Menu sticky
 window.onscroll = () => stickyHeader();
@@ -14,3 +15,5 @@ window.dispatchEvent(new Event('scroll'));
 burguerMenu();
 // ShortenLink form
 shortenLink();
+// Get started button
+getStarted();

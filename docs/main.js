@@ -4001,7 +4001,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _imports_assets__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./imports/assets */ \"./src/js/imports/assets.js\");\n/* harmony import */ var _imports_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./imports/styles */ \"./src/js/imports/styles.js\");\n/* harmony import */ var _modules_sticky_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/sticky-header */ \"./src/js/modules/sticky-header.js\");\n/* harmony import */ var _modules_burguer_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/burguer-menu */ \"./src/js/modules/burguer-menu.js\");\n/* harmony import */ var _modules_shorten_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/shorten-link */ \"./src/js/modules/shorten-link.js\");\n// Images\n // Styles\n\n // Modules\n\n\n\n // Menu sticky\n\nwindow.onscroll = function () {\n  return Object(_modules_sticky_header__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n};\n\nwindow.dispatchEvent(new Event('scroll')); // burguerMenu\n\nObject(_modules_burguer_menu__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(); // ShortenLink form\n\nObject(_modules_shorten_link__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n\n//# sourceURL=webpack:///./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _imports_assets__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./imports/assets */ \"./src/js/imports/assets.js\");\n/* harmony import */ var _imports_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./imports/styles */ \"./src/js/imports/styles.js\");\n/* harmony import */ var _modules_sticky_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/sticky-header */ \"./src/js/modules/sticky-header.js\");\n/* harmony import */ var _modules_burguer_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/burguer-menu */ \"./src/js/modules/burguer-menu.js\");\n/* harmony import */ var _modules_shorten_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/shorten-link */ \"./src/js/modules/shorten-link.js\");\n/* harmony import */ var _modules_get_started__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/get-started */ \"./src/js/modules/get-started.js\");\n// Images\n // Styles\n\n // Modules\n\n\n\n\n // Menu sticky\n\nwindow.onscroll = function () {\n  return Object(_modules_sticky_header__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n};\n\nwindow.dispatchEvent(new Event('scroll')); // burguerMenu\n\nObject(_modules_burguer_menu__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(); // ShortenLink form\n\nObject(_modules_shorten_link__WEBPACK_IMPORTED_MODULE_4__[\"default\"])(); // Get started button\n\nObject(_modules_get_started__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\n\n//# sourceURL=webpack:///./src/js/main.js?");
 
 /***/ }),
 
@@ -4026,6 +4026,18 @@ eval("__webpack_require__.r(__webpack_exports__);\nvar btnMenu = document.getEle
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var clipboard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! clipboard */ \"./node_modules/clipboard/dist/clipboard.js\");\n/* harmony import */ var clipboard__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(clipboard__WEBPACK_IMPORTED_MODULE_0__);\n/* eslint-disable no-param-reassign */\n\n/* eslint-disable array-callback-return */\n\n\nvar copyLink = function copyLink(elements) {\n  elements.forEach(function (el) {\n    var clipboard = new clipboard__WEBPACK_IMPORTED_MODULE_0__(el);\n    clipboard.on('success', function () {\n      var currentEl = document.querySelector('.copied');\n\n      if (currentEl) {\n        document.querySelector('.copied').textContent = 'Copy';\n        document.querySelector('.copied').classList.remove('copied');\n      }\n\n      el.textContent = 'Copied!';\n      el.classList.add('copied');\n    });\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (copyLink);\n\n//# sourceURL=webpack:///./src/js/modules/copy-link.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/get-started.js":
+/*!***************************************!*\
+  !*** ./src/js/modules/get-started.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* eslint-disable no-param-reassign */\nvar buttons = document.querySelectorAll('.get-started');\nvar form = document.getElementById('shorten-form');\nvar offset = form.offsetTop - 150;\n\nvar getStarted = function getStarted() {\n  buttons.forEach(function (el) {\n    el.onclick = function () {\n      window.scrollTo({\n        top: offset,\n        left: 0,\n        behavior: 'smooth'\n      });\n\n      window.onscroll = function () {\n        if (window.scrollY === offset) form[0].focus();\n      };\n    };\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (getStarted);\n\n//# sourceURL=webpack:///./src/js/modules/get-started.js?");
 
 /***/ }),
 
