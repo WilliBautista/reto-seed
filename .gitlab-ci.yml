@@ -1,8 +1,5 @@
 image: node:10.17.0
-
-cache:
-  paths:
-  - vendor/
+image: ruby:2.3
 
 pages:
   script:
