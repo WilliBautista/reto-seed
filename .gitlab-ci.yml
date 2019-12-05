@@ -5,6 +5,7 @@ before_script:
 
 pages:
   script:
+  - bundle clean --force
   - gem install colorator
   - gem install jekyll --no-document
   - jekyll new testreto
