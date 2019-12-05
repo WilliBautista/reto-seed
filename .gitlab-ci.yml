@@ -6,7 +6,6 @@ pages:
   - gem install jekyll
   - jekyll new testreto
   - cd testreto
-  - jekyll --version
   - bundle install --path vendor
   - bundle exec jekyll build -d dist
   - bundle exec jekyll serve
