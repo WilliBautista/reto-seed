@@ -42,7 +42,7 @@ const shortenLink = () => {
         });
 
         if (!hashExist) {
-          listLinks.insertAdjacentHTML('beforeend', itemLink(dataUrl.url, dataUrl.shortenUrl));
+          listLinks.insertAdjacentHTML('beforeend', itemLink(dataUrl.url, shortenUrl));
           links.push({
             originalUrl: dataUrl.url,
             shortenUrl,
