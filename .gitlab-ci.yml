@@ -5,8 +5,8 @@ before_script:
 
 pages:
   script:
-  - gem install jekyll --no-document
   - gem install colorator
+  - gem install jekyll --no-document
   - jekyll new testreto
   - cd testreto
   - bundle exec jekyll build -d dist
