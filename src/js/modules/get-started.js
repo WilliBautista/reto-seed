@@ -12,9 +12,9 @@ const getStarted = () => {
         behavior: 'smooth',
       });
 
-      window.onscroll = () => {
+      window.addEventListener('scroll', () => {
         if (window.scrollY === offset) form[0].focus();
-      };
+      });
     };
   });
 };

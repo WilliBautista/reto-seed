@@ -4037,7 +4037,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var clip
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* eslint-disable no-param-reassign */\nvar buttons = document.querySelectorAll('.get-started');\nvar form = document.getElementById('shorten-form');\nvar offset = form.offsetTop - 150;\n\nvar getStarted = function getStarted() {\n  buttons.forEach(function (el) {\n    el.onclick = function () {\n      window.scrollTo({\n        top: offset,\n        left: 0,\n        behavior: 'smooth'\n      });\n\n      window.onscroll = function () {\n        if (window.scrollY === offset) form[0].focus();\n      };\n    };\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (getStarted);\n\n//# sourceURL=webpack:///./src/js/modules/get-started.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* eslint-disable no-param-reassign */\nvar buttons = document.querySelectorAll('.get-started');\nvar form = document.getElementById('shorten-form');\nvar offset = form.offsetTop - 150;\n\nvar getStarted = function getStarted() {\n  buttons.forEach(function (el) {\n    el.onclick = function () {\n      window.scrollTo({\n        top: offset,\n        left: 0,\n        behavior: 'smooth'\n      });\n      window.addEventListener('scroll', function () {\n        if (window.scrollY === offset) form[0].focus();\n      });\n    };\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (getStarted);\n\n//# sourceURL=webpack:///./src/js/modules/get-started.js?");
 
 /***/ }),
 
