@@ -3,13 +3,11 @@ image: node:10.17.0
 cache:
   paths:
   - vendor/
-  exclude:
-  - vendor
 
 pages:
   script:
   - bundle install
-  - bundle exec jekyll build -d public
+  - bundle exec jekyll build -d dist
   artifacts:
     paths:
     - public
