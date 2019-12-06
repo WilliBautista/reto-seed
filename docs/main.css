@@ -281,7 +281,7 @@ header {
           margin: 0; } }
 
 .main-content {
-  background: linear-gradient(0, #F0F1F6 93%, white 20%); }
+  background: linear-gradient(0, #F0F1F6 86%, white 20%); }
   .main-content .shorten-link .shorten-form {
     display: flex;
     flex-direction: column;
