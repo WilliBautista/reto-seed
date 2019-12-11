@@ -1,4 +1,13 @@
 // Global styles
+:root {
+  --fsize: 16px;
+
+  @media screen and (min-width: $brp769) {
+    --fsize: 18px;
+  }
+}
+
+
 html,
 body {
   height: 100%;

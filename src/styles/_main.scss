@@ -187,7 +187,7 @@ header {
 }
 // Main content
 .main-content {
-  background: linear-gradient(0, $grayaLight 86%, white 20%);
+  background: linear-gradient(0, $grayaLight 92%, white 20%);
 
   .shorten-link {
 
@@ -281,6 +281,15 @@ header {
 
         .btn {
           margin-top: 15px;
+
+          &.copied {
+
+            &,
+            &:hover {
+              background: $darkViolet;
+              border-color: $darkViolet;
+            }
+          }
         }
 
         @media screen and (min-width: $brp769) {
@@ -299,14 +308,6 @@ header {
             .btn {
               margin-top: 0;
               margin-left: 20px;
-
-              &.copied {
-                &,
-                &:hover {
-                  background: $darkViolet;
-                  border-color: $darkViolet;
-                }
-              }
             }
           }
         }
@@ -423,17 +424,26 @@ header {
 }
 
 footer {
-  .footer-first {
+  .wrapper-contain {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 300px;
-    background: $darkViolet url('../assets/images/svg/bg-boost-mobile.svg') top right no-repeat;
+    justify-content: center;
+  }
+
+  .footer-first {
+    background: $darkViolet url('../assets/images/svg/bg-boost-mobile.svg') top right no-repeat / cover;
+
+    .wrapper-contain {
+      height: 300px;
+    }
 
     @media screen and (min-width: $brp769) {
-      height: 250px;
       background-image: url('../assets/images/svg/bg-boost-desktop.svg');
+
+      .wrapper-contain {
+        height: 250px;
+      }
     }
 
     h2 {
@@ -443,9 +453,6 @@ footer {
   }
 
   .footer-second {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background: $veryDarkViolet;
 
     &__logo {
@@ -502,9 +509,11 @@ footer {
     }
 
     @media screen and (min-width: $brp769) {
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: space-around;
+      .wrapper-contain {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+      }
 
       &__links {
         width: 40%;

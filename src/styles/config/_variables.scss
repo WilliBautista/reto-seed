@@ -35,11 +35,3 @@ $transition: .5s;
 
 // Networks
 $networks: facebook, twitter, pinterest, instagram;
-
-:root {
-  --fsize: 16px;
-
-  @media screen and (min-width: $brp769) {
-    --fsize: 18px;
-  }
-}
