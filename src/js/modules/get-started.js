@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 const buttons = document.querySelectorAll('.get-started');
 const form = document.getElementById('shorten-form');
-const offset = form.offsetTop - 150;
+const offset = form.offsetTop - 160;
 
 const getStarted = () => {
   buttons.forEach((el) => {

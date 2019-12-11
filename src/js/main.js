@@ -11,7 +11,7 @@ import getStarted from './modules/get-started';
 // Menu sticky
 window.onscroll = () => stickyHeader();
 window.dispatchEvent(new Event('scroll'));
-// burguerMenu
+// burguer menu
 burguerMenu();
 // ShortenLink form
 shortenLink();
