@@ -37,8 +37,8 @@ const config = {
         use: [
           MiniCSSExtractPlugin.loader,
           'css-loader',
-          'sass-loader',
           'postcss-loader',
+          'sass-loader',
         ],
       },
       {
