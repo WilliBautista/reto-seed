@@ -1,11 +1,10 @@
 const path = require('path');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const basePath = __dirname;
 const distPath = 'docs';
-
-const pathResolve = (pathComplete) => path.resolve(basePath, pathComplete);
 
 const config = {
   mode: 'production',
@@ -14,10 +13,10 @@ const config = {
     extensions: ['.js', '.jsx'],
   },
   entry: {
-    main: ['@babel/polyfill', pathResolve('./src/js/main.js')],
+    main: ['@babel/polyfill', path.resolve(basePath, 'src/js/main.js')],
   },
   output: {
-    path: pathResolve(distPath),
+    path: path.resolve(basePath, distPath),
     publicPath: './',
     filename: '[name].js',
   },
@@ -25,7 +24,7 @@ const config = {
     rules: [
       {
         test: /\.js$/,
-        exclude: pathResolve('node_modules'),
+        exclude: /node_modules/,
         use: [
           'babel-loader',
           'eslint-loader',
@@ -33,7 +32,7 @@ const config = {
       },
       {
         test: /\.scss$/,
-        exclude: pathResolve('node_modules'),
+        exclude: /node_modules/,
         use: [
           MiniCSSExtractPlugin.loader,
           'css-loader',
@@ -84,8 +83,9 @@ const config = {
       filename: '[name].css',
     }),
     new HtmlWebpackPlugin({
-      template: pathResolve('src/index.html'),
+      template: path.resolve(basePath, 'src/index.html'),
     }),
+    new OptimizeCssAssetsPlugin(),
   ],
 };
 

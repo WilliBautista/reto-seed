@@ -13,7 +13,7 @@ const config = {
     extensions: ['.js', '.jsx'],
   },
   entry: {
-    main: ['@babel/polyfill', path.resolve(basePath, './src/js/main.js')],
+    main: ['@babel/polyfill', path.resolve(basePath, 'src/js/main.js')],
   },
   output: {
     path: path.resolve(basePath, distPath),
